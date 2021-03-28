@@ -13,5 +13,5 @@ Another item in library is **valueProvider**. It uses localStorage, therefore we
 Value provider provides data to given key. The first is to try to retrieve data from local storage - if found, that's it, data can go back to caller, else... else, in async manire, fetch data by key from service... then store it to local strorage and return result.
 ___
 | [Previous](https://github.com/noviKorisnik/tao-react-client/tree/snapshot001) | [Home](https://github.com/noviKorisnik/tao-react-client) | [Next](https://github.com/noviKorisnik/tao-react-client/tree/snapshot003) |
-| :-: | :-: |
+| :-: | :-: | :-: |
 ___
