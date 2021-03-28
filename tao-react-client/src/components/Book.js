@@ -30,9 +30,9 @@ const Book = () => {
     if (book) return (
         <>
             {!tao || <Link to={{ pathname: '/' }}>{tao.title}</Link>}
-            {!tao || <> | <select onChange={(e) => { history.push(`/book/${e.target.value}`); }}>
+            {!tao || <> | <select onChange={(e) => { history.push(`/book/${e.target.value}`); }} value={code}>
                 {tao.books.map((b) =>
-                    <option key={b.code} value={b.code} selected={code === b.code}>{b.code} : {b.title}</option>
+                    <option key={b.code} value={b.code}>{b.code} : {b.title}</option>
                 )}
             </select>
             </>}

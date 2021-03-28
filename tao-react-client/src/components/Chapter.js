@@ -37,15 +37,14 @@ const Chapter = () => {
         }
     }, [tao, book, chapter]);
 
-
     if (chapter) return (
         <>
             {!tao || <Link to={{ pathname: '/' }}>{tao.title}</Link>}
             {!(tao && book) || <> | </>}
             {!book || <Link to={{ pathname: `/book/${book.code}` }}>{book.code} : {book.title}</Link>}
-            {!book || <> | <select onChange={(e) => { history.push(`/chapter/${e.target.value}`); }}>
+            {!book || <> | <select onChange={(e) => { history.push(`/chapter/${e.target.value}`); }} value={code}>
                 {book.chapters.map((c) =>
-                    <option key={c.code} value={c.code} selected={code === c.code}>Chapter {c.code}</option>
+                    <option key={c.code} value={c.code}>Chapter {c.code}</option>
                 )}
             </select>
             </>}

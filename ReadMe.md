@@ -1,25 +1,51 @@
 [tao-react-client](https://github.com/noviKorisnik/tao-react-client)
 ___
-### snapshot004
-## tao
-It is time to connect our components with data they need.
+### snapshot005
+## one bugfix
+I noticed a warning at console with the following text:
+```
+Warning: Use the `defaultValue` or `value` props on <select> instead of setting `selected` on <option>.
+```
+And OK, as instructed, changes are made in selects of book and chapter components - warning is gone and the code itself looks somehow nicer.
+## keyed navigation
+Driven with idea to use arrow buttons as event which turns book pages...
 
-We are introducing variable **tao** via **_useState_**. It gets inital value of null and it has it's own setting method setTao.
+... in App component the following is added:
+``` js
+const navDispatcher = (e) => {
+    if (e.altKey) return;
+    const direction =
+        e.code === 'ArrowLeft' ? 'prev'
+        : e.code === 'ArrowRight' ? 'next'
+        : null;
+    if (direction !== null) {
+        document.dispatchEvent(
+            new CustomEvent('navigate', { detail: { direction: direction } })
+        );
+    };
+}
+```
+As intented to be used with some key event, to map left arrow key as instruction to go on the previous book page and right arrow key as trigger for the next book page. We have check on use of alt key, since the same buttons with pressed alt key already have navigational behavior (moving through history), so this story will go only without alt key.
 
-We use another hook, **_useEffect_**, to provide needed data. If we trace how display is organized (that is what function returns), with initial run we have tao set to null, so returned is dummy div element. On the end of render is the moment when useEffect is triggered and then, after our first run, intro logic test if we don't have tao passes, so we call our library to provide us with data for key Tao and when that is retrieved, we set tao with it... that change triggers refresh and we get nice display of tao with contents and links to books.
+And, if we have some arrow, we dispatch custom event with info on which direction we want to turn page now. We'll need to listen for this event on some other place, where we know better what to do with it, but, later...
 
-We have another useEffect hook to set document title. Here is already seen how it is easier to use hooks instead traditional lifecycle events. I am new to react and I have read documentation before started to play with this project and after reading there was not single doubt for me what approach will I take in development - hail hooks!
-## book
-All said with Tao we have also with Book, just a bit different. There we had the list of links to book, here we have backlink to Tao and select list with books, as navigation detail that we can change from one book to another.
+Well, presented like this, we just have some new name not in use... OK, we put in use in the following way:
+``` js
+  useEffect(() => {
+    document.addEventListener('keydown', navDispatcher);
+    return () => { document.removeEventListener('keydown', navDispatcher); };
+  });
+```
+Now we have adding listener to keydown event. When some key is down, navDispatcher is called with event info (and if alt is not pressed and some good arrow is...).
 
-Select works on change event and use another hook, **_useHistory_** from router, to direct us to location of another book.
-## chapter
-Similar is with Chapter, it has navigation links to it's ancestory (book and tao) and siblings.
+Here we added listener with useEffect. Now, besides adding listener there is return something... to remove the same listener before the next call. That is the way how subscriptions are handled with hooks - without that, tested, we get multiplication of listeners and guaranteed memory leak.
 
-We have one flaw at the moment, as we don't have navigation to chapter page from it's book, no way to find chapter if we don't type it's code in browser... it could be... it could be set on book page as the list of chapters, just as we have the list of books on tao page, but... but chapters are here poorly represented only by code and such list would not be pretty enough.
+I like how is here neat to handle on the same spot both subscribe and unsubscribe process for the single event, and we can have many useEfect declarations, each to handle one specific task with it's full lifecycle. In contrast, with traditional react lifecycle methods we had all subscriptions declared in one method (called like componentDidMount) and, again all of them unsubscribed in another method (componentWillUnmount).
+## navigator
+Just one more component, set inside app router, with nothing visual, but to take care of our custom navigation.
 
-So, we have to deal more with navigation, somehow different... that is for another snapshot.
+It uses custom hook **_useNav_** to update page location on **_navigate_** event is dispatched. Hook uses useEffect too add and remove listener on navigate and bind event to **_handler_**. Function navigate provides address of the new page in given direction based on current location...
 ___
-| [Previous](https://github.com/noviKorisnik/tao-react-client/tree/snapshot003) | [Home](https://github.com/noviKorisnik/tao-react-client) | [Next](https://github.com/noviKorisnik/tao-react-client/tree/snapshot005) |
+| [Previous](https://github.com/noviKorisnik/tao-react-client/tree/snapshot004) | [Home](https://github.com/noviKorisnik/tao-react-client) | [Next](https://github.com/noviKorisnik/tao-react-client/tree/snapshot006) |
 | :-: | :-: | :-: |
 ___
