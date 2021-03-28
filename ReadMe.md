@@ -1,17 +1,16 @@
 [tao-react-client](https://github.com/noviKorisnik/tao-react-client)
 ___
-### snapshot002
-## the idea
-This is intentended to be readable spot which uses service of [tao-dotnet-api](https://github.com/noviKorisnik/tao-dotnet-api) - the first steps, for instance, could be to provide service usage - let start on that way...
-## offline?
-Before that, not bad if we provide that app can do something without net. It is about reading book, so not too interactive, no change in data we succeed to provide once. And before that, to note that all app source we store in src directory.
+### snapshot003
+## router
+The intention of this app is to emulate book reading.
 
-For helper functions we introduced lib directory (real library indeed), and there is now **localStorage** to work with local storage, to store data and retrieve them connected to given key.
-## value provider
-Another item in library is **valueProvider**. It uses localStorage, therefore we introduced it already.
+Consider book, like tao - there is some cover page, then contents, within tao there are books, then chapters and some text. All in all, it not be bad if we had it organized in pages - one for cover/contents, one for each book intro and one for each chapter. And, if we look at service we intend to use - it is already organized in such way.
 
-Value provider provides data to given key. The first is to try to retrieve data from local storage - if found, that's it, data can go back to caller, else... else, in async manire, fetch data by key from service... then store it to local strorage and return result.
+Then... it is a good moment to introduce router, easy to work with pages in react when we have one.
+```
+npm install react-router-dom
+```
 ___
-| [Previous](https://github.com/noviKorisnik/tao-react-client/tree/snapshot001) | [Home](https://github.com/noviKorisnik/tao-react-client) | [Next](https://github.com/noviKorisnik/tao-react-client/tree/snapshot003) |
+| [Previous](https://github.com/noviKorisnik/tao-react-client/tree/snapshot002) | [Home](https://github.com/noviKorisnik/tao-react-client) | [Next](https://github.com/noviKorisnik/tao-react-client/tree/snapshot004) |
 | :-: | :-: | :-: |
 ___
