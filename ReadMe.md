@@ -6,7 +6,7 @@ This is intentended to be readable spot which uses service of [tao-dotnet-api](h
 ## offline?
 Before that, not bad if we provide that app can do something without net. It is about reading book, so not too interactive, no change in data we succeed to provide once. And before that, to note that all app source we store in src directory.
 
-for helper functions we introduced lib directory (real library indeed), and there is now **localStorage** to work with local storage, to store data and retrieve them connected to given key.
+For helper functions we introduced lib directory (real library indeed), and there is now **localStorage** to work with local storage, to store data and retrieve them connected to given key.
 ## value provider
 Another item in library is **valueProvider**. It uses localStorage, therefore we introduced it already.
 
