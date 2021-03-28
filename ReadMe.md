@@ -1,27 +1,25 @@
 [tao-react-client](https://github.com/noviKorisnik/tao-react-client)
 ___
-### snapshot003
-## router
-The intention of this app is to emulate book reading.
+### snapshot004
+## tao
+It is time to connect our components with data they need.
 
-Consider book, like tao - there is some cover page, then contents, within tao there are books, then chapters and some text. All in all, it not be bad if we had it organized in pages - one for cover/contents, one for each book intro and one for each chapter. And, if we look at service we intend to use - it is already organized in such way.
+We are introducing variable **tao** via **_useState_**. It gets inital value of null and it has it's own setting method setTao.
 
-Then... it is a good moment to introduce router, easy to work with pages in react when we have one.
-```
-npm install react-router-dom
-```
-## components
-The new directory is introduced, containing components. Components are just representation of tipical pages of our application - here, that would be **Tao**, **Book** and **Chapter**.
+We use another hook, **_useEffect_**, to provide needed data. If we trace how display is organized (that is what function returns), with initial run we have tao set to null, so returned is dummy div element. On the end of render is the moment when useEffect is triggered and then, after our first run, intro logic test if we don't have tao passes, so we call our library to provide us with data for key Tao and when that is retrieved, we set tao with it... that change triggers refresh and we get nice display of tao with contents and links to books.
 
-It is good to notice that we have only one Tao page (cover page, home page, many names for the same thing). On the other hand, there are many Books and Chapters - which are uniquely resolved with **_code_** - therefore we use router hook **_useParams_** to assign it.
-## app with router and components
-**App** is now changed to fit our needs - we use router, and based on recognized route is rendered apropriate component, while book and chapter gets their needed code.
-## test
-Components are basic at the moment, not connected to content they need to show, but we can test router.
-* http://localhost:3000/ **Tao**
-* http://localhost:3000/book/TheBestBook **Book TheBestBook**
-* http://localhost:3000/chapter/AnotherChapter **Chapter AnotherChapter**
+We have another useEffect hook to set document title. Here is already seen how it is easier to use hooks instead traditional lifecycle events. I am new to react and I have read documentation before started to play with this project and after reading there was not single doubt for me what approach will I take in development - hail hooks!
+## book
+All said with Tao we have also with Book, just a bit different. There we had the list of links to book, here we have backlink to Tao and select list with books, as navigation detail that we can change from one book to another.
+
+Select works on change event and use another hook, **_useHistory_** from router, to direct us to location of another book.
+## chapter
+Similar is with Chapter, it has navigation links to it's ancestory (book and tao) and siblings.
+
+We have one flaw at the moment, as we don't have navigation to chapter page from it's book, no way to find chapter if we don't type it's code in browser... it could be... it could be set on book page as the list of chapters, just as we have the list of books on tao page, but... but chapters are here poorly represented only by code and such list would not be pretty enough.
+
+So, we have to deal more with navigation, somehow different... that is for another snapshot.
 ___
-| [Previous](https://github.com/noviKorisnik/tao-react-client/tree/snapshot002) | [Home](https://github.com/noviKorisnik/tao-react-client) | [Next](https://github.com/noviKorisnik/tao-react-client/tree/snapshot004) |
+| [Previous](https://github.com/noviKorisnik/tao-react-client/tree/snapshot003) | [Home](https://github.com/noviKorisnik/tao-react-client) | [Next](https://github.com/noviKorisnik/tao-react-client/tree/snapshot005) |
 | :-: | :-: | :-: |
 ___
