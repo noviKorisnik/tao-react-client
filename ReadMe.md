@@ -1,4 +1,4 @@
-[tao-react-client](https://github.com/noviKorisnik/tao-react-client)
+[tao-react-client](https://github.com/noviKorisnik/tao-react-client#readme)
 ___
 ### snapshot004
 ## tao
@@ -20,6 +20,6 @@ We have one flaw at the moment, as we don't have navigation to chapter page from
 
 So, we have to deal more with navigation, somehow different... that is for another snapshot.
 ___
-| [Previous](https://github.com/noviKorisnik/tao-react-client/tree/snapshot003) | [Home](https://github.com/noviKorisnik/tao-react-client) | [Next](https://github.com/noviKorisnik/tao-react-client/tree/snapshot005) |
+| [Previous](https://github.com/noviKorisnik/tao-react-client/tree/snapshot003#readme) | [Home](https://github.com/noviKorisnik/tao-react-client#readme) | [Next](https://github.com/noviKorisnik/tao-react-client/tree/snapshot005#readme) |
 | :-: | :-: | :-: |
 ___
