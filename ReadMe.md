@@ -8,5 +8,6 @@ The project is presented here with snapshot branches of development process, wit
 * [snapshot003](https://github.com/noviKorisnik/tao-react-client/tree/snapshot003#readme) router and components
 * [snapshot004](https://github.com/noviKorisnik/tao-react-client/tree/snapshot004#readme) pages and hooks
 * [snapshot005](https://github.com/noviKorisnik/tao-react-client/tree/snapshot005#readme) sequential navigation
-* [snapshot006](https://github.com/noviKorisnik/tao-react-client/tree/snapshot006#readme) detach value provider from service, design enhancements (toDo)
+* [snapshot006](https://github.com/noviKorisnik/tao-react-client/tree/snapshot006#readme) detach value provider from service
+* [snapshot007](https://github.com/noviKorisnik/tao-react-client/tree/snapshot007#readme) (toDo)
 ___
