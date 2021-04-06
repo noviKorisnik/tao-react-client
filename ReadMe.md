@@ -1,9 +1,10 @@
-[tao-react-client](https://github.com/noviKorisnik/tao-react-client)
+# tao-react-client
 ___
-### snapshot006
-## changed value provider
-To change the story a bit and detach from service, in **public** directory is now set json with complete Tao and value provider is directed there to fetch data with several helper methods to provide same output as one we got from service for the same key.
-___
-| [Previous](https://github.com/noviKorisnik/tao-react-client/tree/snapshot005) | [Home](https://github.com/noviKorisnik/tao-react-client) | [Next](https://github.com/noviKorisnik/tao-react-client/tree/snapshot007) |
-| :-: | :-: | :-: |
+
+* [snapshot001](https://github.com/noviKorisnik/tao-react-client/tree/snapshot001#readme)
+* [snapshot002](https://github.com/noviKorisnik/tao-react-client/tree/snapshot002#readme)
+* [snapshot003](https://github.com/noviKorisnik/tao-react-client/tree/snapshot003#readme)
+* [snapshot004](https://github.com/noviKorisnik/tao-react-client/tree/snapshot004#readme)
+* [snapshot005](https://github.com/noviKorisnik/tao-react-client/tree/snapshot005#readme)
+* [snapshot006](https://github.com/noviKorisnik/tao-react-client/tree/snapshot006#readme)
 ___
