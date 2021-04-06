@@ -1,8 +1,8 @@
-[tao-react-client](https://github.com/noviKorisnik/tao-react-client)
+[tao-react-client](https://github.com/noviKorisnik/tao-react-client#readme)
 ___
 ### snapshot002
 ## the idea
-This is intentended to be readable spot which uses service of [tao-dotnet-api](https://github.com/noviKorisnik/tao-dotnet-api) - the first steps, for instance, could be to provide service usage - let start on that way...
+This is intentended to be readable spot which uses service of [tao-dotnet-api](https://github.com/noviKorisnik/tao-dotnet-api#readme) - the first steps, for instance, could be to provide service usage - let start on that way...
 ## offline?
 Before that, not bad if we provide that app can do something without net. It is about reading book, so not too interactive, no change in data we succeed to provide once. And before that, to note that all app source we store in src directory.
 
@@ -12,6 +12,6 @@ Another item in library is **valueProvider**. It uses localStorage, therefore we
 
 Value provider provides data to given key. The first is to try to retrieve data from local storage - if found, that's it, data can go back to caller, else... else, in async manire, fetch data by key from service... then store it to local strorage and return result.
 ___
-| [Previous](https://github.com/noviKorisnik/tao-react-client/tree/snapshot001) | [Home](https://github.com/noviKorisnik/tao-react-client) | [Next](https://github.com/noviKorisnik/tao-react-client/tree/snapshot003) |
+| [Previous](https://github.com/noviKorisnik/tao-react-client/tree/snapshot001#readme) | [Home](https://github.com/noviKorisnik/tao-react-client#readme) | [Next](https://github.com/noviKorisnik/tao-react-client/tree/snapshot003#readme) |
 | :-: | :-: | :-: |
 ___
