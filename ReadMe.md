@@ -1,4 +1,4 @@
-[tao-react-client](https://github.com/noviKorisnik/tao-react-client)
+[tao-react-client](https://github.com/noviKorisnik/tao-react-client#readme)
 ___
 ### snapshot001
 ## project requirements
@@ -11,6 +11,6 @@ yarn start
 ```
 Here we call command to create new react app using template. It takes some time... and after that we have an app, the working app, when started with great spinning animation - nothing left to do if that is what we wanted! Uh well, I wanted something else, so - the next chapter is here.
 ___
-| [Home](https://github.com/noviKorisnik/tao-react-client) | [Next](https://github.com/noviKorisnik/tao-react-client/tree/snapshot002) |
+| [Home](https://github.com/noviKorisnik/tao-react-client#readme) | [Next](https://github.com/noviKorisnik/tao-react-client/tree/snapshot002#readme) |
 | :-: | :-: |
 ___
