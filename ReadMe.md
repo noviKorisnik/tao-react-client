@@ -1,4 +1,4 @@
-[tao-react-client](https://github.com/noviKorisnik/tao-react-client)
+[tao-react-client](https://github.com/noviKorisnik/tao-react-client#readme)
 ___
 ### snapshot005
 ## one bugfix
@@ -46,6 +46,6 @@ Just one more component, set inside app router, with nothing visual, but to take
 
 It uses custom hook **_useNav_** to update page location on **_navigate_** event is dispatched. Hook uses useEffect too add and remove listener on navigate and bind event to **_handler_**. Function navigate provides address of the new page in given direction based on current location...
 ___
-| [Previous](https://github.com/noviKorisnik/tao-react-client/tree/snapshot004) | [Home](https://github.com/noviKorisnik/tao-react-client) | [Next](https://github.com/noviKorisnik/tao-react-client/tree/snapshot006) |
+| [Previous](https://github.com/noviKorisnik/tao-react-client/tree/snapshot004#readme) | [Home](https://github.com/noviKorisnik/tao-react-client#readme) | [Next](https://github.com/noviKorisnik/tao-react-client/tree/snapshot006#readme) |
 | :-: | :-: | :-: |
 ___
