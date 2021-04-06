@@ -1,4 +1,4 @@
-[tao-react-client](https://github.com/noviKorisnik/tao-react-client)
+[tao-react-client](https://github.com/noviKorisnik/tao-react-client#readme)
 ___
 ### snapshot003
 ## router
@@ -22,6 +22,6 @@ Components are basic at the moment, not connected to content they need to show, 
 * http://localhost:3000/book/TheBestBook **Book TheBestBook**
 * http://localhost:3000/chapter/AnotherChapter **Chapter AnotherChapter**
 ___
-| [Previous](https://github.com/noviKorisnik/tao-react-client/tree/snapshot002) | [Home](https://github.com/noviKorisnik/tao-react-client) | [Next](https://github.com/noviKorisnik/tao-react-client/tree/snapshot004) |
+| [Previous](https://github.com/noviKorisnik/tao-react-client/tree/snapshot002#readme) | [Home](https://github.com/noviKorisnik/tao-react-client#readme) | [Next](https://github.com/noviKorisnik/tao-react-client/tree/snapshot004#readme) |
 | :-: | :-: | :-: |
 ___
