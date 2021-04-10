@@ -37,10 +37,10 @@ const Book = () => {
             </select>
             </>}
             <hr />
-            <h4>{code}</h4>
-            <h2>{book.title}</h2>
-            <h6>{book.quoted}</h6>
-            <h4>{book.quote}</h4>
+            <h4 class="code">{code}</h4>
+            <h2 class="title">{book.title}</h2>
+            <h6 class="quoted">{book.quoted}</h6>
+            <h4 class="quote">{book.quote}</h4>
         </>
     );
 

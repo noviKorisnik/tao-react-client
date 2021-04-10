@@ -19,9 +19,9 @@ const Tao = () => {
 
     if (tao) return (
         <>
-            <h3>{tao.author}</h3>
-            <h1>{tao.title}</h1>
-            <ul>
+            <h3 class="author">{tao.author}</h3>
+            <h1 class="title">{tao.title}</h1>
+            <ul class="books">
                 {tao.books.map(
                     book => <li key={book.code}><Link to={{ pathname: `/book/${book.code}` }}>{book.code} : {book.title}</Link></li>
                 )}
