@@ -1,4 +1,4 @@
-import { getData, storeData, clearData } from './localStorage';
+import { getData, storeData } from './localStorage';
 
 const path = 'https://localhost:5001/';
 

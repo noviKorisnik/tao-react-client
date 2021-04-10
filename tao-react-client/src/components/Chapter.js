@@ -48,7 +48,8 @@ const Chapter = () => {
                 )}
             </select>
             </>}
-            <h5>{code}</h5>
+            <hr />
+            <h5 class="code">{code}</h5>
             {chapter.paragraphs.map(
                 paragraph =>
                     paragraph.isBlockquote
